@@ -1,0 +1,29 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: spring-redis
+  profiles:
+    active: active
+  datasource:
+    url: jdbc:mysql://193.112.69.237:3306/chenyong?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    database: 0
+    host: 193.112.69.237
+    port: 6379
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    
+chenyong:
+  cyy:
+    key: user
+com:
+  cyy:
+    value: ${random.value} 
